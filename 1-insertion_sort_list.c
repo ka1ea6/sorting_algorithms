@@ -28,11 +28,11 @@ void insertion_sort_list(listint_t **list)
 			continue;
 		}
 
-		while(sorted_iter->n > curr->n)
+		while (sorted_iter->n > curr->n)
 		{
 			sorted_iter->next = curr->next;
 			if (curr->next)
-				curr->next->prev=  sorted_iter;
+				curr->next->prev = sorted_iter;
 			curr->next = sorted_iter;
 			if (sorted_iter->prev)
 			{
