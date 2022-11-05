@@ -14,20 +14,16 @@ void insertion_sort_list(listint_t **list)
 
 	if (!list || !(*list)->next)
 		return;
-
 	curr = (*list)->next;
-
 	while (curr)
 	{
 		sorted_iter = curr->prev;
 		temp = curr->next;
-
 		if (curr->n > sorted_iter->n)
 		{
 			curr = curr->next;
 			continue;
 		}
-
 		while (sorted_iter->n > curr->n)
 		{
 			sorted_iter->next = curr->next;
@@ -35,25 +31,16 @@ void insertion_sort_list(listint_t **list)
 				curr->next->prev = sorted_iter;
 			curr->next = sorted_iter;
 			if (sorted_iter->prev)
-			{
 				sorted_iter->prev->next = curr;
-			}
 			else
-			{
 				*list = curr;
-			}
-
 			curr->prev = sorted_iter->prev;
 			sorted_iter->prev = curr;
 			print_list(*list);
 			if (!(sorted_iter->prev->prev))
 				break;
-
 			sorted_iter = sorted_iter->prev->prev;
 		}
-
 		curr = temp;
 	}
 }
-
-
