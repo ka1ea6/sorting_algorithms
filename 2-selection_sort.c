@@ -12,7 +12,7 @@
 
 void selection_sort(int *array, size_t size)
 {
-	int temp, i, j, min_index;
+	int i, j, min_index;
 	
 	if (check_array_is_sorted(array, size))
 		return;
@@ -27,9 +27,7 @@ void selection_sort(int *array, size_t size)
 		}
 		if (min_index != i)
 		{
-			temp = array[i];
-			array[i] = array[min_index];
-			array[min_index] = temp;
+			swap(&array[i], &array[min_index]);
 			print_array(array, size);
 		}
 	}
