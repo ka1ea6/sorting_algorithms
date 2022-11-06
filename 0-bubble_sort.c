@@ -13,6 +13,9 @@ void bubble_sort(int *array, size_t size)
 {
 	int temp, i, j;
 
+	if (check_array_is_sorted(array, size))
+		return;
+
 	for (i = 0; i < (int)size; i++)
 	{
 		for (j = 0; j < (int)size - 1; j++)
@@ -27,3 +30,6 @@ void bubble_sort(int *array, size_t size)
 		}
 	}
 }
+
+
+
