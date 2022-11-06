@@ -54,7 +54,7 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
 
 int  partition(int *array, int low, int high, size_t size)
 {
-	int i, j;
+	int temp, i, j;
 
 	i = low;
 
@@ -62,7 +62,9 @@ int  partition(int *array, int low, int high, size_t size)
 	{
 		if (array[j] < array[high])
 		{
-			swap(&array[i], &array[j]);
+			temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
 			i++;
 		}
 	}
