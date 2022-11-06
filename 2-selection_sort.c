@@ -14,9 +14,6 @@ void selection_sort(int *array, size_t size)
 {
 	int temp, i, j, min_index;
 	
-	if (check_array_is_sorted(array, size))
-		return;
-
 	for (i = 0; i < (int)size; i++)
 	{
 		min_index = i;
