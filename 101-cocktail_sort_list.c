@@ -53,6 +53,7 @@ void cocktail_sort_list(listint_t **list)
  *
  * @first_node: first node to be swapped.
  * @second_node: second node to be swapped.
+ * @list: list containing the nodes.
  *
  * Return: Nothing.
  */
