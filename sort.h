@@ -39,5 +39,6 @@ void cocktail_sort_list(listint_t **list);
 void list_swap(listint_t *first_node, listint_t *second_node, listint_t **list);
 void counting_sort(int *array, size_t size);
 int get_array_max(int *array, size_t size);
+void merge_sort(int *array, size_t size);
 
 #endif
