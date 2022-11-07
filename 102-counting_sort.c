@@ -17,6 +17,9 @@ void counting_sort(int *array, size_t size)
 	array_max = get_array_max(array, size);
 	res_array = malloc(sizeof(int) * (array_max + 1));
 
+	if (!res_array)
+		return;
+
 	for (i = 0; i <= array_max; i++)
 	{
 		res_array[i] = 0;
@@ -47,6 +50,16 @@ void counting_sort(int *array, size_t size)
 	print_array(res_array, array_max + 1);
 	free(res_array);
 }
+
+/**
+ * get_array_max - Function to get the maximum integer in an
+ * array of integers.
+ *
+ * @array: array to be checked.
+ * @size: size fo the array to be checked.
+ *
+ * Return: the maximum number in the array.
+ */
 
 int get_array_max(int *array, size_t size)
 {
