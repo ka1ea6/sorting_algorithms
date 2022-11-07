@@ -65,7 +65,7 @@ void sorter(int *array, __attribute__((unused))size_t size, int start_idx, int m
 {
 	int i, j;
 
-	printf("Merging...\n[left]: ", start_idx, middle_idx, end_idx);
+	printf("Merging...\n[left]: ");
 	print_array(array + start_idx, middle_idx - start_idx);
 	printf("[right]: ");
 	print_array(array + (middle_idx), end_idx - middle_idx);
