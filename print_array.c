@@ -44,21 +44,3 @@ int check_array_is_sorted(int *array, size_t size)
 
 	return (1);
 }
-
-/**
- * swap - A Function to swap to integers
- *
- * @a: number to be swapped
- * @b: number to swap
- * 
- * Return: Nothing.
- */
-
-void swap(int *a, int *b)
-{
-	int tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
