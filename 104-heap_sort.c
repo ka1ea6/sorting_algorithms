@@ -25,7 +25,6 @@ void heap_sort(int *array, size_t size)
 		swap(&array[0], &array[i]);
 		print_array(array, size);
 		heapify(array, size, i, 0);
-
 	}
 }
 
@@ -34,7 +33,8 @@ void heap_sort(int *array, size_t size)
  *
  * @array: array to be heapified.
  * @size: Size of the array to be heapified.
- * @i: Largest value in array.
+ * @i: Largest value in array
+ * @j: size of heap..
  *
  * Return: Nothing.
  */
