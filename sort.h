@@ -24,7 +24,6 @@ typedef struct listint_s
 int check_array_is_sorted(int *array, size_t size);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
-void swap(int *a, int *b);
 
 /** sort functions **/
 
@@ -42,5 +41,6 @@ int get_array_max(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
 
 #endif
